@@ -13,6 +13,3 @@ services:
   api:
     build:
       context: ./backend
-    ports:
-      # TODO: Expose only to web
-      - "8001:8000"
