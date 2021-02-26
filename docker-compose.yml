@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  web:
+    image: nginx:alpine
+    volumes:
+      - "./frontend:/usr/share/nginx/html"
+    ports:
+      # TODO: 443 to 80
+      - "8000:80"  # temporary
+
+  api:
+    build:
+      context: ./backend
+    ports:
+      # TODO: Expose only to web
+      - "8001:8000"
