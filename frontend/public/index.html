@@ -10,7 +10,7 @@
     </output>
     <script>
         const API_ROOT = location.origin + "/api";
-        fetch(`${API_ROOT}/hello`)
+        fetch(`${API_ROOT}/`)
          .then(head => head.json())
          .then(body => {
             document.querySelector('output').innerText = body.text;
